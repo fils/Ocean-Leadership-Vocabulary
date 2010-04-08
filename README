@@ -1,4 +1,37 @@
 This is the initial commit for a repository of XSD files to define namespace issues for COL efforts.
 
-Doug
+Note this XSD is fine for defining a schema or XML namespace by which a document could be checked to be valid. 
+However, it does not define true "concepts" that could be used in a linked data approach via SPARQL or other 
+mechanisms.
 
+To realize that a version in any of RDFS, OWL or SKOS would need to be created to make a vocabulary for use in 
+SPARQL or other linked data approaches.  
+
+This XSD is useful to cases such the extensions to the sitemap.xml schema to support WADL documents, for example.
+So for a sitemap.xml file like the following:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:col="http://oceanleadership.org/2010/01/sitemapextension/schema.xsd"> 
+<url><loc>http://iodp-usio.org/</loc></url>
+<col:wadl>
+  <col:wadlURI>http://iodp-usio.org/services.wadl</col:wadlURI>
+</col:wadl>
+</urlset>  
+
+The elements wadl and wadlURI need to be defined in the col.xsd file.  
+
+RDF version of document:
+
+
+Converting to XHTML:
+
+
+References:
+Vocab Best practices: http://www.w3.org/TR/swbp-vocab-pub/
+DC in RDF:  http://dublincore.org/documents/dc-rdf/
+
+
+
+
+
+Doug
