@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:col="http://oceanleadership.org/2010/01/sitemapextension/schema.xsd">
+    <url>
+        <loc>http://iodp-usio.org/</loc>
+    </url>
+    <col:wadl>
+        <col:wadlURI>http://iodp-usio.org/services.wadl</col:wadlURI>
+    </col:wadl>
+</urlset>
