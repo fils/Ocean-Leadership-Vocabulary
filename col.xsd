@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://oceanleadership.org/col/elements/1.0/"
+    targetNamespace="http://oceanleadership.org/col/elements/1.0/">
+
+    <xs:annotation>
+        <xs:documentation xml:lang="en">The first pass at making a set of namespace elements for use
+            in the Linked Data effort at USIO's </xs:documentation>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"> </xs:import>
+
+    <!-- Note that later we could use refinements like from dc to dcterms via the 
+    substitutionGroup method to refine things like leg to dsdpleg or odpleg or cdex, etc.
+    These are refinements that could come later.  The approach is open to that now, we don't
+    need to worry.
+    <xs:element name="leg" type="integerType"/>
+    <xs:element name="site" type="integerType"/>
+    -->
+    <xs:element name="hole" type="integerType"/>
+    <xs:element name="sitehole" type="elementType"/>
+    <xs:element name="core" type="elementType"/>
+    <xs:element name="section" type="elementType"/>
+
+    <xs:element name="sectiontop" type="elementType"/>
+    <!-- The following eleements perhaps need to be in something more related to lith -->
+    <!-- same oas above sectiontop ? -->
+    <xs:element name="obsvntop" type="elementType"/>  
+    <xs:element name="obsvbottom" type="elementType"/>
+    
+    <!-- lith relate elements (issues to address here?) -->
+    <xs:element name="locn" type="elementType"/>
+    
+    <!-- 
+    <xs:element name="datset" type="elementType"/>
+    
+    <xs:element name="obsvn" type="elementType"/>
+    <xs:element name="device" type="elementType"/>
+    <xs:element name="calcpelag" type="elementType"/>
+    -->
+    <!-- many many more -->
+    
+    <!-- Age model related elements -->
+    <!-- Depth is a prime example of breaking out mbsf and all the other versions -->
+    <xs:element name="depthtype" type="elementType"/>
+    <xs:element name="timescale" type="elementType"/> 
+    <xs:element name="depth" type="floatType"/>
+    <xs:element name="age" type="floatType"/>
+    
+    <!-- Cruise values -->
+    <!-- These keep being added..  so it's curious if one should even do this...    plus this should be in a IODP, not COL space -->
+    <xs:element name="leg">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="310"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <!-- These keep being added..  so it's curious if one should even do this...    plus this should be in a IODP, not COL space -->
+    <xs:element name="site">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="310"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    
+    <!-- Janus related elements  (should these be in a iodp namespace? -->
+
+   <!-- types sections -->
+    <xs:complexType name="elementType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="integerType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="floatType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>
