@@ -1,14 +1,25 @@
 Information regarding COL and other drilling relation vocabularies:
 
-
 File index:
-col.xsd
-sitemap.xml
-mesurement.rdf
-ldeoMeasurements.rdf
+* col.xsd
+Start of a XSD to collect conceptes related to Ocean Leadership
+
+* sitemap.xml
+Example sitemap.xml for LDEO services.  Demonstrates the use of nodes related to WADL as defined in col.xsd for discovery pattern. 
+Reference http://www.youtube.com/watch?v=5mCjnEYxvX8 for screencast on discovery and description process.  
+
+* mesurement.rdf
+Original LDEO measurements vocabulary for reference
+
+*ldeoMeasurements.rdf
+Slighlty modified version of LDEO measurements vocabulary using small changes in namespaces. 
+
 ldeoServiceMapping.rdf
+A test document to map from a resource (like a REST call to LDEO services) to a concept entry in the ldeoMeasurements.rdf file. 
+This is only a test and not a production quality representation.  
 
 
+-----------------------------------------------------------------------------------------
 Note this XSD is fine for defining a schema or XML namespace by which a document could be checked to be valid. 
 However, it does not define true "concepts" that could be used in a linked data approach via SPARQL or other 
 mechanisms.
@@ -27,18 +38,14 @@ So for a sitemap.xml file like the following:
 </col:wadl>
 </urlset>  
 
-The elements wadl and wadlURI need to be defined in the col.xsd file.  
-
-RDF version of document:
-
-
-Converting to XHTML:
-
+-----------------------------------------------------------------------------------------
+Notes:
+* The elements wadl and wadlURI need to be defined in the col.xsd file.  
+* Need RDF version of the col.xsd document
+* Need to resolve an a best approach to converting to XHTML for publication of the vocabulary.  
 
 References:
 Vocab Best practices: http://www.w3.org/TR/swbp-vocab-pub/
 DC in RDF:  http://dublincore.org/documents/dc-rdf/
-
-
 
 Doug
