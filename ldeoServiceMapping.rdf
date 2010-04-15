@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlsns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:Description rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=caliper">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#caliper"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=density">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#density"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=gamma%20ray">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#gamma%20ray"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=geochemistry">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#geochemistry"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=inclinometry">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#inclinometry"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=magnetic%20field">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#magnetic%20field"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=magnetic%20susceptibility">
+        <skos.related
+            rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#magnetic%20susceptibility"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=nuclear%20magnetic%20resonance">
+        <skos.related
+            rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#nuclear%20magnetic%20resonance"
+        />
+    </rdf:Description>
+    <rdf:Description rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=porosity">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#porosity"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=P%20velocity">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#P%20velocity"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=S%20velocity">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#S%20velocity"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=Stoneley%20velocity">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#Stoneley%20velocity"
+        />
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=resistivity">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#resistivity"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=spontaneous%20potential">
+        <skos.related
+            rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#spontaneous%20potential"/>
+    </rdf:Description>
+    <rdf:Description
+        rdf:about="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=temperature">
+        <skos.related rdf:resource="http://brg.ldeo.columbia.edu/services/dict/#temperature"/>
+    </rdf:Description>
+</rdf:RDF>
