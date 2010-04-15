@@ -1,4 +1,13 @@
-This is the initial commit for a repository of XSD files to define namespace issues for COL efforts.
+Information regarding COL and other drilling relation vocabularies:
+
+
+File index:
+col.xsd
+sitemap.xml
+mesurement.rdf
+ldeoMeasurements.rdf
+ldeoServiceMapping.rdf
+
 
 Note this XSD is fine for defining a schema or XML namespace by which a document could be checked to be valid. 
 However, it does not define true "concepts" that could be used in a linked data approach via SPARQL or other 
@@ -29,8 +38,6 @@ Converting to XHTML:
 References:
 Vocab Best practices: http://www.w3.org/TR/swbp-vocab-pub/
 DC in RDF:  http://dublincore.org/documents/dc-rdf/
-
-
 
 
 
