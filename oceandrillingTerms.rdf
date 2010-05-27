@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rdfs-xhtml.xsl"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+    <rdf:Description rdf:about="http://oceandrilling.org/core/1/">
+        <dc:title>Ocean Drilling: an RDF vocabulary</dc:title>
+        <dc:description>A vocabulary to describe ocean drilling efforts</dc:description>
+        <dc:date>$Date: 2010/05/26 00:00:00 $</dc:date>
+        <rdfs:label>drilling</rdfs:label>
+        <rdfs:comment> revision 1.0 date: 2010/05/26 00:00:00 ; author: Fils; Initial version
+        </rdfs:comment>
+    </rdf:Description>
+
+    <!-- 
+    <rdfs:Class rdf:about="http://oceandrilling.org/core/1/depth">
+        <rdfs:label>depth</rdfs:label>
+        <rdfs:comment>Any of a potential range of different depth scales</rdfs:comment>
+    </rdfs:Class>
+-->
+
+    <!-- should do a leg site hole entry too -->
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/waterdepth">
+        <rdfs:label>waterdepth</rdfs:label>
+        <rdfs:comment>Depth of the water from surface to sea floor at the site of drilling
+            (mbsl)</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreCount">
+        <rdfs:label>coreCount</rdfs:label>
+        <rdfs:comment>Number of core sections for a drill hole</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreInterval">
+        <rdfs:label>coreInterval</rdfs:label>
+        <rdfs:comment>Meters of the core interval</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreRecovery">
+        <rdfs:label>coreRecovery</rdfs:label>
+        <rdfs:comment>Meters of core recovered</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/percentRecovery">
+        <rdfs:label>percentRecovery</rdfs:label>
+        <rdfs:comment>Core recovery over interval cored</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/drilled">
+        <rdfs:label>drilled</rdfs:label>
+        <rdfs:comment>Meters drilled</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/pentration">
+        <rdfs:label>pentration</rdfs:label>
+        <rdfs:comment>Drill hole depth in meters below seafloor</rdfs:comment>
+    </rdf:Property>
+
+</rdf:RDF>
