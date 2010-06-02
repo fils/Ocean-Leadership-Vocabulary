@@ -18,33 +18,134 @@
         <rdfs:label>depth</rdfs:label>
         <rdfs:comment>Any of a potential range of different depth scales</rdfs:comment>
     </rdfs:Class>
--->
+     -->
 
     <!-- should do a leg site hole entry too -->
 
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/program">
+        <rdfs:label>program</rdfs:label>
+        <rdfs:comment>One of DSPD, ODP, or IODP to designate the various programs that drilling was
+            done under</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/expidition">
+        <rdfs:label>exepidition</rdfs:label>
+        <!-- relates to leg and vise versa-->
+        <rdfs:comment>Name of the cruise</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/leg">
+        <rdfs:label>leg</rdfs:label>
+        <rdfs:comment>Numeric expiditon numbers</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/site">
+        <rdfs:label>site</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/hole">
+        <rdfs:label>hole</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/latitiude">
+        <rdfs:label>latitude</rdfs:label>
+        <rdfs:label>Latitude (decimal degrees)</rdfs:label>
+        <rdfs:comment>Location in latitude. Normally this entry should not be used. Rather the geo:
+            namespace concept should be using in place of this. </rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/longitude">
+        <rdfs:label>longitude</rdfs:label>
+        <rdfs:label>Longitude (decimal degrees)</rdfs:label>
+        <rdfs:comment>Location in longitude. Normally this entry should not be used. Rather the geo:
+            namespace concept should be using in place of this. </rdfs:comment>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://oceandrilling.org/core/1/waterdepth">
         <rdfs:label>waterdepth</rdfs:label>
+        <rdfs:label>Water Depth (MBSL)</rdfs:label>
         <rdfs:comment>Depth of the water from surface to sea floor at the site of drilling
             (mbsl)</rdfs:comment>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreCount">
         <rdfs:label>coreCount</rdfs:label>
-        <rdfs:comment>Number of core sections for a drill hole</rdfs:comment>
+        <rdfs:label>core recovered</rdfs:label>
+        <rdfs:label>number of cores</rdfs:label>
+        <rdfs:comment>Numerica count of core sections for a drill hole</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/expeditionsite">
+        <rdfs:label>expeditionsite</rdfs:label>
+        <rdfs:label>expedition site</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/scienceprospectus">
+        <rdfs:label>science prospectus</rdfs:label>
+        <rdfs:label>scientific prospectus</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/initialreportvolume">
+        <rdfs:label>initialreportvolume</rdfs:label>
+        <rdfs:label>initial report volume</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/preliminaryreport">
+        <rdfs:label>preliminaryreport</rdfs:label>
+        <rdfs:label>preliminary report</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/scientificreportvolume">
+        <rdfs:label>scientificreportvolume</rdfs:label>
+        <rdfs:label>scientific report volume</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/proceedingreport">
+        <rdfs:label>proceedingreport</rdfs:label>
+        <rdfs:label>proceeding report</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <!-- Are these following three data nodes perhaps locations likes URI's -->
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coredata">
+        <rdfs:label>coredata</rdfs:label>
+        <rdfs:label>core data</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/logdata">
+        <rdfs:label>logdata</rdfs:label>
+        <rdfs:label>log data</rdfs:label>
+        <rdfs:comment/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/vcddata">
+        <rdfs:label>vcddata</rdfs:label>
+        <rdfs:label>vcd data</rdfs:label>
+        <rdfs:comment/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreInterval">
         <rdfs:label>coreInterval</rdfs:label>
+        <rdfs:label>interval cored (m)</rdfs:label>
         <rdfs:comment>Meters of the core interval</rdfs:comment>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreRecovery">
-        <rdfs:label>coreRecovery</rdfs:label>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/coreRecovered">
+        <rdfs:label>coreRecovered</rdfs:label>
+        <rdfs:label>core recovered (m)</rdfs:label>
         <rdfs:comment>Meters of core recovered</rdfs:comment>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://oceandrilling.org/core/1/percentRecovery">
-        <rdfs:label>percentRecovery</rdfs:label>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/percentRecovered">
+        <rdfs:label>percentRecovered</rdfs:label>
         <rdfs:comment>Core recovery over interval cored</rdfs:comment>
     </rdf:Property>
 
@@ -56,6 +157,12 @@
     <rdf:Property rdf:about="http://oceandrilling.org/core/1/pentration">
         <rdfs:label>pentration</rdfs:label>
         <rdfs:comment>Drill hole depth in meters below seafloor</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/comment">
+        <rdfs:label>comment</rdfs:label>
+        <!--  there are a million ways to do this in existing (all?) vocabs  -->
+        <rdfs:comment>Generic text comment node</rdfs:comment>
     </rdf:Property>
 
 </rdf:RDF>
