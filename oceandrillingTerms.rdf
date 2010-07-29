@@ -2,7 +2,9 @@
 <?xml-stylesheet type="text/xsl" href="rdfs-xhtml.xsl"?>
 
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
 
     <rdf:Description rdf:about="http://oceandrilling.org/core/1/">
         <dc:title>Ocean Drilling: an RDF vocabulary</dc:title>
@@ -18,10 +20,253 @@
         <rdfs:label>depth</rdfs:label>
         <rdfs:comment>Any of a potential range of different depth scales</rdfs:comment>
     </rdfs:Class>
-     -->
+    -->
+
+    <!-- jqGarden terms -->
+    <!--  ?  make a top level concept of what the janus elements are?  ie.   paramters from the jqGarden app? -->
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus">
+        <rdfs:label>Janus Analysis</rdfs:label>
+        <rdfs:comment>Analysis groups from the Janus Data Overview at
+            http://iodp.tamu.edu/janusweb/general/dbtable.cgi </rdfs:comment>
+        <skos:related rdf:resource="http://iodp.tamu.edu/janusweb/general/dbtable.cgi"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/chemistry">
+        <rdfs:label>Janus Chemistry</rdfs:label>
+        <rdfs:comment>Analysis groups related to Chemistry from the Janus Data Overview at
+            http://iodp.tamu.edu/janusweb/general/dbtable.cgi </rdfs:comment>
+        <skos:related rdf:resource="http://iodp.tamu.edu/janusweb/general/dbtable.cgi"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/paleo">
+        <rdfs:label>Janus Chemistry</rdfs:label>
+        <rdfs:comment>Analysis groups related to Paleo from the Janus Data Overview at
+            http://iodp.tamu.edu/janusweb/general/dbtable.cgi </rdfs:comment>
+        <skos:related rdf:resource="http://iodp.tamu.edu/janusweb/general/dbtable.cgi"/>
+    </rdf:Property>
+    
+    
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/gradat">
+        <rdfs:label>gradat</rdfs:label>
+        <rdfs:comment>GRA Bulk Density</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/xrddata">
+        <rdfs:label>xrddata</rdfs:label>
+        <rdfs:comment>X-Ray Diffraction</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/chemcarb">
+        <rdfs:label>chemcarb</rdfs:label>
+        <rdfs:comment>Chemistry Carbonates</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/chemistry"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/chemgas">
+        <rdfs:label>chemgas</rdfs:label>
+        <rdfs:comment>Chemistry Gas Elements</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/chemistry"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/chemiw">
+        <rdfs:label>chemiw</rdfs:label>
+        <rdfs:comment>Chemistry Interstitial Waters</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/chemistry"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/rockeval">
+        <rdfs:label>rockeval</rdfs:label>
+        <rdfs:comment>Chemistry Rock Eval</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/chemistry"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/coresumm">
+        <rdfs:label>coresumm</rdfs:label>
+        <rdfs:comment>Core summary</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/closeup">
+        <rdfs:label>closeup</rdfs:label>
+        <rdfs:comment>Close up imaging data</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/primedataimages">
+        <rdfs:label>primedataimages</rdfs:label>
+        <rdfs:comment>Prime Data Images</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/palinv">
+        <rdfs:label>palinv</rdfs:label>
+        <rdfs:comment>Paleo Invesitgation Tables</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/paleo"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/range">
+        <rdfs:label>range</rdfs:label>
+        <rdfs:comment>Range Tables (taxa)</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/paleo"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/cryomag">
+        <rdfs:label>cryomag</rdfs:label>
+        <rdfs:comment>Cryomag</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/colordat">
+        <rdfs:label>colordat</rdfs:label>
+        <rdfs:comment>Color data / reflectance</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/totalCore">
+        <rdfs:label>totalCore</rdfs:label>
+        <rdfs:comment>Core count and data</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/sampleCount">
+        <rdfs:label>sampleCount</rdfs:label>
+        <rdfs:comment>Sample count and data</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/mslsectioncount">
+        <rdfs:label>mslsectioncount</rdfs:label>
+        <rdfs:comment>Magnetic Susceptibility</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/ngrsectioncount">
+        <rdfs:label>ngrsectioncount</rdfs:label>
+        <rdfs:comment>Natural Gamma Radiation</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/pwlsectioncount">
+        <rdfs:label>pwlsectioncount</rdfs:label>
+        <rdfs:comment>P-Wave velocity whole core</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/pwssectioncount">
+        <rdfs:label>pwssectioncount</rdfs:label>
+        <rdfs:comment>P-Wave vecolicity split core</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/madsamplecount">
+        <rdfs:label>madsamplecount</rdfs:label>
+        <rdfs:comment>Moister and Desity</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/thermconcount">
+        <rdfs:label>thermconcount</rdfs:label>
+        <rdfs:comment>Thermal Conductivity </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/shearstrengthcount">
+        <rdfs:label>shearstrengthcount</rdfs:label>
+        <rdfs:comment>Shear Strength</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/ms2fsectioncount">
+        <rdfs:label>ms2fsectioncount</rdfs:label>
+        <rdfs:comment>Point Susceptibility</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/dhtapctruncount">
+        <rdfs:label>dhtapctruncount</rdfs:label>
+        <rdfs:comment>Down hole temperature Adara</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/splicercount">
+        <rdfs:label>splicercount</rdfs:label>
+        <rdfs:comment>Splicer</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/tensorcorecount">
+        <rdfs:label>tensorcorecount</rdfs:label>
+        <rdfs:comment>Tensor</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/paleosamplecount">
+        <rdfs:label>paleosamplecount</rdfs:label>
+        <rdfs:comment>Paleo Sample Count</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/paleo"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/ageprofilecount">
+        <rdfs:label>ageprofilecount</rdfs:label>
+        <rdfs:comment>Age Profile</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/paleo"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/agedatapointcount">
+        <rdfs:label>agedatapointcount</rdfs:label>
+        <rdfs:comment>Age Data Point count / Age Depth Model Points</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus/paleo"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/xrdimagecount">
+        <rdfs:label>xrdimagecount</rdfs:label>
+        <rdfs:comment>X-Ray Diffraction</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/xrfsamplecount">
+        <rdfs:label>xrfsamplecount</rdfs:label>
+        <rdfs:comment>X-Ray Fluorescence</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/icpsamplecount">
+        <rdfs:label>icpsamplecount</rdfs:label>
+        <rdfs:comment>ICP samples</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/smearslidecount">
+        <rdfs:label>smearslidecount</rdfs:label>
+        <rdfs:comment>Smear Slides</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/sedthinsectcount">
+        <rdfs:label>sedthinsectcount</rdfs:label>
+        <rdfs:comment>Sediment Thin Sections</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/hrthincount">
+        <rdfs:label>hrthincount</rdfs:label>
+        <rdfs:comment>Hard Rock Thin Sections</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/vcdimagecount">
+        <rdfs:label>vcdimagecount</rdfs:label>
+        <rdfs:comment>Visual Code Description image count</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/coreimagescount">
+        <rdfs:label>coreimagescount</rdfs:label>
+        <rdfs:comment>Core image count</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/janus/coresectionimagescount">
+        <rdfs:label>coresectionimagescount</rdfs:label>
+        <rdfs:comment>Core section image count</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://oceandrilling.org/core/1/janus"/>
+    </rdf:Property>
+
+
+    <!--  Some playing with CI (Central Inventory) terms  -->
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/iodpci/volume">
+        <rdfs:label>volume</rdfs:label>
+        <rdfs:comment>Sample Volume in the master IODP space</rdfs:comment>
+        <skos:related rdf:resource="http://www.oceanleadership.org/core/1/cdexci/#samplevolumecm3"/>
+        <skos:related rdf:resource="http://www.oceanleadership.org/core/1/esoci/#volume"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.oceanleadership.org/core/1/cdexci/#samplevolumecm3">
+        <rdfs:label>volume_cdex</rdfs:label>
+        <rdfs:comment>Sample volume in the CDEX CI space</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.oceanleadership.org/core/1/esoci/#volume">
+        <rdfs:label>volume_eso</rdfs:label>
+        <rdfs:comment>Sample volume in the ESO CI space</rdfs:comment>
+    </rdf:Property>
+
 
     <!-- should do a leg site hole entry too -->
-
     <rdf:Property rdf:about="http://oceandrilling.org/core/1/program">
         <rdfs:label>program</rdfs:label>
         <rdfs:comment>One of DSPD, ODP, or IODP to designate the various programs that drilling was
