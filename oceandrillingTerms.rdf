@@ -273,7 +273,7 @@
             done under</rdfs:comment>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://oceandrilling.org/core/1/expidition">
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/expedition">
         <rdfs:label>exepidition</rdfs:label>
         <!-- relates to leg and vise versa-->
         <rdfs:comment>Name of the cruise</rdfs:comment>
@@ -294,7 +294,7 @@
         <rdfs:comment/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://oceandrilling.org/core/1/latitiude">
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/latitude">
         <rdfs:label>latitude</rdfs:label>
         <rdfs:label>Latitude (decimal degrees)</rdfs:label>
         <rdfs:comment>Location in latitude. Normally this entry should not be used. Rather the geo:
@@ -399,7 +399,7 @@
         <rdfs:comment>Meters drilled</rdfs:comment>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://oceandrilling.org/core/1/pentration">
+    <rdf:Property rdf:about="http://oceandrilling.org/core/1/penetration">
         <rdfs:label>pentration</rdfs:label>
         <rdfs:comment>Drill hole depth in meters below seafloor</rdfs:comment>
     </rdf:Property>
