@@ -8,35 +8,38 @@
 
 <> <#title> "Parameter Details and Data Sources" .
 
-:IntendedParameter a rdfs:Class ;
+:IntendedParameter a skos:Concept ;
   skos:altLable "Intended Parameter";
   dc:description "The parameter class associated with the values" .
 
-:Technology a rdfs:Class ;
+:Technology a skos:Concept ;
   skos:altLable "Technology";
   dc:description "The field of science / engineering used for a parameter" .
 
-:ReportedName a rdfs:Class ;
+:ReportedName a skos:Concept ;
   skos:altLable "Reported Name";
   dc:description "Typical name used in reporting" .
 
-:geologicStructures a rdfs:Class ;
+:geologicStructures a skos:Concept ;
   skos:altLable "Geologic Structures";
   rdfs:subClassOf :IntendedParameter .
 
-:acousticImaging a rdfs:Class ;
+:acousticImaging a skos:Concept ;
   skos:altLable "acoustic imaging";
   rdfs:subClassOf :Technology .
 
-:boreholeAcousticImages a rdfs:Class ;
+:boreholeAcousticImages a skos:Concept ;
   skos:altLable "borehole acoustic images";
   rdfs:subClassOf :ReportedName .
 
-:borehole_acoustic_images_logs_brg a rdfs:Class; 
+:borehole_acoustic_images_logs_brg a skos:Concept; 
   rdfs:subClassOf :geologicStructures; 
   rdfs:subClassOf :acousticImaging;
   rdfs:subClassOf :boreholeAcousticImages ;
   skos:related "http://foo.com" ;
+  skos:broader :geologicStructures; 
+  skos:broader  :acousticImaging;
+  skos:broader  :boreholeAcousticImages ;
   skos:altLable "borehole acoustic images logs brg" .
 
 
