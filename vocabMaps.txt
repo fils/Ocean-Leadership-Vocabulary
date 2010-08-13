@@ -1,0 +1,29 @@
+Need to resovle out the map of vocabularies (top
+level vocabularies) that are going to be part of this effort. 
+
+
+Notes:
+- namespace is of course just a recommendation as any graph can 
+use the namespace URI under any "tag" it wishes
+
+Name		Janus Age Model Terms
+Namespace	janusamp	
+URI/Location	http://chronos.org/core/1/janus
+Scope/Notes
+
+Name		Ocean Drilling terms (used by codices)
+Namespace	iodp
+URI/Location
+Scope/Notes
+
+Name  		Janus Garden terms
+Namespace	janus
+URI/Location
+Scope/Notes
+
+Name		Janus imagestrips
+Namespace
+URI/Location
+Scope/Notes
+
+
