@@ -6,30 +6,30 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dc:  <http://purl.org/dc/elements/1.1/> .
 
-<> <#title> "Parameter Details and Data Sources" .
+<http://oceandrilling.org/core/1/foo> <#title> "Parameter Details and Data Sources" .
 
 :IntendedParameter a skos:Concept ;
-  skos:altLable "Intended Parameter";
+  skos:prefLabel "Intended Parameter";
   dc:description "The parameter class associated with the values" .
 
 :Technology a skos:Concept ;
-  skos:altLable "Technology";
+  skos:prefLabel "Technology";
   dc:description "The field of science / engineering used for a parameter" .
 
 :ReportedName a skos:Concept ;
-  skos:altLable "Reported Name";
+  skos:prefLabel "Reported Name";
   dc:description "Typical name used in reporting" .
 
 :geologicStructures a skos:Concept ;
-  skos:altLable "Geologic Structures";
+  skos:prefLabel "Geologic Structures";
   rdfs:subClassOf :IntendedParameter .
 
 :acousticImaging a skos:Concept ;
-  skos:altLable "acoustic imaging";
+  skos:prefLabel "acoustic imaging";
   rdfs:subClassOf :Technology .
 
 :boreholeAcousticImages a skos:Concept ;
-  skos:altLable "borehole acoustic images";
+  skos:prefLabel "borehole acoustic images";
   rdfs:subClassOf :ReportedName .
 
 :borehole_acoustic_images_logs_brg a skos:Concept; 
@@ -40,7 +40,7 @@
   skos:broader :geologicStructures; 
   skos:broader  :acousticImaging;
   skos:broader  :boreholeAcousticImages ;
-  skos:altLable "borehole acoustic images logs brg" .
+  skos:prefLabel "borehole acoustic images logs brg" .
 
 
 
