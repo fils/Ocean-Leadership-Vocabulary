@@ -8,34 +8,44 @@
 
 <http://oceandrilling.org/core/1/foo> <#title> "Parameter Details and Data Sources" .
 
-:IntendedParameter a skos:Concept ;
-  skos:prefLabel "Intended Parameter";
+# Converted these from Concept to ConceptScheme to let
+# be a collection of concepts 
+# Note:  ConceptScheme nodes require rdfs:label vs skos:prefLable for Concept nodes
+:IntendedParameter a skos:ConceptScheme ;
+  rdfs:label "Intended Parameter" ;
+  skos:hasTopConcept :geologicStructures ;
   dc:description "The parameter class associated with the values" .
 
-:Technology a skos:Concept ;
-  skos:prefLabel "Technology";
+:Technology a skos:ConceptScheme ;
+  rdfs:label "Technology" ;
+  skos:hasTopConcept :acousticImaging ;
   dc:description "The field of science / engineering used for a parameter" .
 
-:ReportedName a skos:Concept ;
-  skos:prefLabel "Reported Name";
+:ReportedName a skos:ConceptScheme ;
+  rdfs:label "Reported Name" ;
+  skos:hasTopConcept :boreholeAcousticImages ;
   dc:description "Typical name used in reporting" .
 
+# these need to be topConcepts or have a skos:broder, 
+# since I am keeping these simple..  I will make them top concepts of the scheme
+# but they obviously are not..  I would need to make one
 :geologicStructures a skos:Concept ;
-  skos:prefLabel "Geologic Structures";
-  rdfs:subClassOf :IntendedParameter .
+  skos:prefLabel "Geologic Structures" ;
+  skos:inScheme :IntendedParameter ;
+  skos:topConceptOf :IntendedParameter .
 
 :acousticImaging a skos:Concept ;
-  skos:prefLabel "acoustic imaging";
-  rdfs:subClassOf :Technology .
+  skos:prefLabel "acoustic imaging" ;
+  skos:inScheme :Technology ;
+  skos:topConceptOf :Technology .
 
 :boreholeAcousticImages a skos:Concept ;
-  skos:prefLabel "borehole acoustic images";
-  rdfs:subClassOf :ReportedName .
+  skos:prefLabel "borehole acoustic images" ;
+  skos:inScheme :ReportedName ;
+  skos:topConceptOf :ReportedName .
 
+# lower level concept
 :borehole_acoustic_images_logs_brg a skos:Concept; 
-  rdfs:subClassOf :geologicStructures; 
-  rdfs:subClassOf :acousticImaging;
-  rdfs:subClassOf :boreholeAcousticImages ;
   skos:related "http://foo.com" ;
   skos:broader :geologicStructures; 
   skos:broader  :acousticImaging;
