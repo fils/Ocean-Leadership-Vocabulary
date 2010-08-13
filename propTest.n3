@@ -1,0 +1,44 @@
+@prefix : <http://iodp-usio.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix sedis: <http://sedis.org/sedis/elements/1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<> <#title> "Parameter Details and Data Sources" .
+
+:IntendedParameter a rdfs:Class ;
+  skos:altLable "Intended Parameter";
+  dc:description "The parameter class associated with the values" .
+
+:Technology a rdfs:Class ;
+  skos:altLable "Technology";
+  dc:description "The field of science / engineering used for a parameter" .
+
+:ReportedName a rdfs:Class ;
+  skos:altLable "Reported Name";
+  dc:description "Typical name used in reporting" .
+
+:geologicStructures a rdfs:Class ;
+  skos:altLable "Geologic Structures";
+  rdfs:subClassOf :IntendedParameter .
+
+:acousticImaging a rdfs:Class ;
+  skos:altLable "acoustic imaging";
+  rdfs:subClassOf :Technology .
+
+:boreholeAcousticImages a rdfs:Class ;
+  skos:altLable "borehole acoustic images";
+  rdfs:subClassOf :ReportedName .
+
+:borehole_acoustic_images_logs_brg a rdfs:Class; 
+  rdfs:subClassOf :geologicStructures; 
+  rdfs:subClassOf :acousticImaging;
+  rdfs:subClassOf :boreholeAcousticImages ;
+  skos:related "http://foo.com" ;
+  skos:altLable "borehole acoustic images logs brg" .
+
+
+
+	

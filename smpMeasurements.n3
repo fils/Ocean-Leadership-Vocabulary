@@ -1,0 +1,124 @@
+@prefix : <http://iodp-usio.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix sedis: <http://sedis.org/sedis/elements/1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<> <#title> "SMP measurements document" . 
+
+:MinimumMeasurements a rdfs:Class ;
+  skos:altLable "Minimum Measurements";
+  dc:description "Defined as measurements that shall be conducted in all boreholes and on all cores in IODP." .
+
+	:Biostratigraphic a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+	:VisualCoreDescription a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+	:SmearSlidesThisSection a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+
+	:SplitCoreDigitalPhotography a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+		:digitalPhotography a rdf:Property .
+		:digitalPhotography rdfs:domain :MinimumMeasurements; rdfs:range :SplitCoreDigitalPhotography .
+
+	:CoreLogging a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+		:naturalGammaRay a rdf:Class; rdfs:subClassOf :CoreLogging; rdfs:subClassOf :DownHoleLogging . 
+		:gammaRayAttenuation a rdf:Class; rdfs:subClassOf :CoreLogging .
+		:magneticSuceptibility a rdf:Class; rdfs:subClassOf :CoreLogging .
+
+	:TempatureProfile a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+	:MoisterAndDensityPorosityOnDescreteSamples a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+
+	:DownHoleLogging a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+		:spectralGamma a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+		:density a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+		:porosity a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+		:resistivity a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+		:sonic a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+		:boreholeImaging a rdf:Class; rdfs:subClassOf :DownHoleLogging .
+
+	:BoreholeDepthScale a rdfs:Class; rdfs:subClassOf :MinimumMeasurements .
+
+
+:StandardMeasurements a rdfs:Class .
+
+	:CorePetrophysics a rdfs:Class; rdfs:subClassOf :StandardMeasurements .
+		:NaturalRemnantMagnetismNRMWithStepWiseDemagnetization  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:CoreLoggingPwaveVelocity  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:PwaveVelocityOnSplitCores  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:PwaveVelocityDiscreteSamples  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:ThermalConductivityBothWholeCoreAndPieces  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:XrayCTScanning  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:WholeRoundCoreDigitalSurfacePhotography  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:ColorReflectance  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:CloseupAndMicroImaging  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:CoreOrientationAndStructuralMeasurements  a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+
+	:DownholePetrophysics a rdfs:Class; rdfs:subClassOf :StandardMeasurements .
+		:VerticalSeismicProfileCheckshot a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:DownholePressure a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:OpenholeTemperature a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:Caliper a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:MagneticSusceptibility a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:MagneticField a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+
+	:MicrobiologyAndGeochemistry a rdfs:Class; rdfs:subClassOf :StandardMeasurements .
+		:PoreWaterChemistry a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+		:WholeRockMajorAndTraceElements a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+		:MicrobiologyCellCountsOnFixedSamples a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+		:BulkCarbon-hydrogen-nitrogen-sulfurCHNSAnalyses a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+		:ContaminationTesting a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+		:CarbonateAnalyses a rdfs:Class; rdfs:subClassOf :MicrobiologyAndGeochemistry .
+
+	:RigFloor a rdfs:Class; rdfs:subClassOf :StandardMeasurements .
+		:WeightOnBit a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:PenetrationRate a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:MudPressure a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:MudDensity a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:MudLoggingIncludingGasAnalysis a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:DrillerDepth a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:PumpingRate a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:RotationRate a rdfs:Class; rdfs:subClassOf :RigFloor .
+		:HeaveCompensation a rdfs:Class; rdfs:subClassOf :RigFloor .
+
+
+# Altered the format here a bit. Putting the Major top level classes
+# to the top and working down (less tree like as used above)
+
+:IODPSupplementalMeasurements a rdfs:Class .
+
+	:DownholePetrophysics a rdfs:Class; rdfs:subClassOf :IODPSupplementalMeasurements .
+	:CorePetrophysics a rdfs:Class; rdfs:subClassOf :IODPSupplementalMeasurements .
+	:GeochemistryAndMicrobiology a rdfs:Class; rdfs:subClassOf :IODPSupplementalMeasurements .
+
+		:LoggingWhileDrillingAndMeasurementsWhileDrilling a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:LoggingWhileCoring a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:PermeabilityThroughPackerTests a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:HighResolutionGamma a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:NuclearMagneticResonance a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:FormationTesting a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:PressurizedCoreSampling a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:DownholeSidewallSampling a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:PressurizedFluidGasSampling a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+		:SpontaneousPotentialSP a rdfs:Class; rdfs:subClassOf :DownholePetrophysics .
+
+		:ARMandIRM a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:PermeabilityOnDiscreteSamples a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:VpandVs a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:Vs a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:ThermalImagingCoreInfrared a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:NuclearMagneticResonance a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:ParticleSizeAnalyzer a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:ShearStrength a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:NoncontactResistivity a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+		:XRFScanner a rdfs:Class; rdfs:subClassOf :CorePetrophysics .
+
+		:LaserAblationInductivelyCoupledPlasmaMassSpectrometry a rdfs:Class; rdfs:subClassOf :GeochemistryAndMicrobiology .
+		:DNABiomarkerPhospholipidMicrobiologicalAnalysis a rdfs:Class; rdfs:subClassOf :GeochemistryAndMicrobiology .
+		:MicrobialActivityMeasurementsUsingRadiotracers a rdfs:Class; rdfs:subClassOf :GeochemistryAndMicrobiology .
+
+
+
+
+
+
+
