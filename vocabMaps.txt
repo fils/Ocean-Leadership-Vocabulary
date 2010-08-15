@@ -6,24 +6,36 @@ Notes:
 - namespace is of course just a recommendation as any graph can 
 use the namespace URI under any "tag" it wishes
 
-Name		Janus Age Model Terms
+Name		sedis
+Namespace	sedis
+URI/Location	
+Scope/Notes
+
+Name		IODP-USIO Ocean Drilling terms (used by codices)
+Namespace	iodp-usio  (dash allowed?)
+URI/Location
+Scope/Notes
+
+Name		Janus Age Model Terms  (used by janusAmp)
 Namespace	janusamp	
 URI/Location	http://chronos.org/core/1/janus
 Scope/Notes
 
-Name		Ocean Drilling terms (used by codices)
-Namespace	iodp
-URI/Location
-Scope/Notes
-
-Name  		Janus Garden terms
+Name  		Janus Garden terms  (used by jqGarden)
 Namespace	janus
 URI/Location
 Scope/Notes
 
-Name		Janus imagestrips
+Name		Janus imagestrips (used by imagestrips app)
 Namespace
 URI/Location
 Scope/Notes
+
+Name	       coreref	
+Namespace
+URI/Location
+Scope/Notes
+
+Need to review and index others
 
 
