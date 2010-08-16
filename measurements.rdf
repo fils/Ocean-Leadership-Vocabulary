@@ -1,0 +1,131 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dct="http://purl.org/dc/terms/">
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#caliper">
+        <skos:definition> A representation of the measured diameter of a borehole along its depth. </skos:definition>
+        <skos:prefLabel> caliper </skos:prefLabel>
+        <skos:altLabel> caliper log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=caliper"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#density">
+        <skos:definition> Mass per unit of volume. </skos:definition>
+        <skos:prefLabel> density </skos:prefLabel>
+        <skos:altLabel> density log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=density"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#gamma%20ray">
+        <skos:definition> Total natural radioactivity. </skos:definition>
+        <skos:prefLabel> gamma ray </skos:prefLabel>
+        <skos:altLabel> gamma ray log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=gamma%20ray"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#geochemistry">
+        <skos:definition> Elemental concentrations from which the geochemistry of the formation may
+            be derived. </skos:definition>
+        <skos:prefLabel> geochemistry </skos:prefLabel>
+        <skos:altLabel> geochemical log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=geochemistry"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#inclinometry">
+        <skos:definition> Dip of the Earth's magnetic field. </skos:definition>
+        <skos:prefLabel> inclinometry </skos:prefLabel>
+        <skos:altLabel> inclinometer log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=inclinometry"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#magnetic%20field">
+        <skos:definition> Strength or direction of the Earth's magnetic field. </skos:definition>
+        <skos:prefLabel> magnetic field </skos:prefLabel>
+        <skos:altLabel> magnetic field log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=magnetic%20field"
+        />
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#magnetic%20susceptibility">
+        <skos:definition> Degree of magnetization of a formation in response to an applied magnetic
+            field. </skos:definition>
+        <skos:prefLabel> magnetic susceptibility </skos:prefLabel>
+        <skos:altLabel> magnetic susceptibility log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=magnetic%20susceptibility"
+        />
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#nuclear%20magnetic%20resonance">
+        <skos:definition> Nuclear magnetic properties of formation hydrogen. </skos:definition>
+        <skos:prefLabel> nuclear magnetic resonance </skos:prefLabel>
+        <skos:altLabel> nuclear magnetic resonance log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=nuclear%20magnetic%20resonance"
+        />
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#porosity">
+        <skos:definition> Percentage of pore volume or void space, or that volume within rock that
+            can contain fluids. </skos:definition>
+        <skos:prefLabel> porosity </skos:prefLabel>
+        <skos:altLabel> porosity log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=porosity"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#P%20velocity">
+        <skos:definition> Compressional (P) wave velocities. </skos:definition>
+        <skos:prefLabel> P velocity </skos:prefLabel>
+        <skos:altLabel> P-wave velocity log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=P%20velocity"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#S%20velocity">
+        <skos:definition> Shear (S) wave velocities. </skos:definition>
+        <skos:prefLabel> S velocity </skos:prefLabel>
+        <skos:altLabel> S-wave velocity log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=S%20velocity"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#Stoneley%20velocity">
+        <skos:definition> Stoneley (tube) wave velocities. </skos:definition>
+        <skos:prefLabel> Stoneley velocity </skos:prefLabel>
+        <skos:altLabel> Stoneley-wave velocity log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=Stoneley%20velocity"
+        />
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#resistivity">
+        <skos:definition> Ability of a material to resist electrical conduction. </skos:definition>
+        <skos:prefLabel> resistivity </skos:prefLabel>
+        <skos:altLabel> resisitivity log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=resistivity"/>
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#spontaneous%20potential">
+        <skos:definition> Naturally occurring (static) electrical potential in the Earth. </skos:definition>
+        <skos:prefLabel> spontaneous potential </skos:prefLabel>
+        <skos:altLabel> spontaneous potential log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=spontaneous%20potential"
+        />
+    </skos:Concept>
+    <skos:Concept xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        rdf:about="http://brg.ldeo.columbia.edu/services/dict/#temperature">
+        <skos:definition> Temperature and temperature gradient. </skos:definition>
+        <skos:prefLabel> temperature </skos:prefLabel>
+        <skos:altLabel> temperature log </skos:altLabel>
+        <dct:subject
+            rdf:resource="http://brg.ldeo.columbia.edu/services/LogHole/?measurement=temperature"/>
+    </skos:Concept>
+</rdf:RDF>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+    xmlns="http://dbseabed.org/dbsbd/elements/1.0/"
+    targetNamespace="http://dbseabed.org/dbsbd/elements/1.0/">
+
+    <!-- WWD [Latitude, Longitude, WaterDepth, ObsvnTop, ObsvnBot, LocnName, DataSetKey,
+        LocnKey, ObsvnKey, Device, DataTypes, Gravel, Sand, Mud, Clay, Grainsze, Sorting,
+        Facies, FacMshp, FolkCde, RckMshp, VegMshp, Carbonate, MunslColr, OrgCarbn, lShearStr,
+        Porosity, PWaveVel, Roughness, lCritShStrs, GeolAge, ObsvnDetails]
+    -->
+    
+    <!-- FAC [Latitude, Longitude, WaterDepth, ObsvnTop, ObsvnBot, Locn, DatSetKey, LocnKey,
+        ObsvnKey, Device, DataType, Terrigenous, Volcanic, CalcPelag, SilcPelag, CarbMud,
+        CarbSand, CalcCrustNod, 'Coral', Shell, CoralReef, Oolite, Sponge, Bryozoan, LargeFrm,
+        Rhodolith, CorallnAlga, Halimeda, Phosphate, Mineralized, HeavyMin, GlaucRelict, Seagrass,
+        Plants, MnNodule, ObsvnDetails]
+    -->
+    
+    <!-- These wont be included as they fall under other namespaces like geo col or others
+        Latitude, Longitude, WaterDepth, ObsvnTop, ObsvnBot, LocnName, Locn  (others?)
+    
+    <xs:element name="Latitude" type="elementType"/>
+    <xs:element name="Longitude" type="elementType"/>
+    <xs:element name="WaterDepth" type="elementType"/>
+    <xs:element name="ObsvnTop" type="elementType"/>
+    <xs:element name="ObsvnBot" type="elementType"/>
+    <xs:element name="Locn" type="elementType"/>
+    <xs:element name="LocnName" type="elementType"/>
+    
+    
+    -->
+
+    <xs:annotation>
+        <xs:documentation xml:lang="en">The first pass at making a set of namespace elements for dbseabed</xs:documentation>
+    </xs:annotation>
+    
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"> </xs:import>
+    
+    <!-- Note that later we could use refinements like from dc to dcterms via the 
+        substitutionGroup method to refine things like leg to dsdpleg or odpleg or cdex, etc.
+        These are refinements that could come later.  The approach is open to that now, we don't
+        need to worry.-->
+  
+    <xs:element name="DataSetKey" type="elementType"/>
+    <xs:element name="LocnKey" type="elementType"/>
+    <xs:element name="ObsvnKey" type="elementType"/>
+    <xs:element name="Device" type="elementType"/>
+    <xs:element name="DataType" type="elementType"/>
+    <xs:element name="Terrigenous" type="elementType"/>
+    <xs:element name="Volcanic" type="elementType"/>
+    <xs:element name="CalcPelag" type="elementType"/>
+    <xs:element name="SilcPelag" type="elementType"/>
+    <xs:element name="CarbMud" type="elementType"/>
+    <xs:element name="CarbSand" type="elementType"/>
+    <xs:element name="CalcCrustNod" type="elementType"/>
+    <xs:element name="Coral" type="elementType"/>
+    <xs:element name="Shell" type="elementType"/>
+    <xs:element name="CoralReef" type="elementType"/>
+    <xs:element name="Oolite" type="elementType"/>
+    <xs:element name="Sponge" type="elementType"/>
+    <xs:element name="Bryozoan" type="elementType"/>
+    <xs:element name="LargeFrm" type="elementType"/>
+    <xs:element name="Rhodolith" type="elementType"/>
+    <xs:element name="CorallnAlga" type="elementType"/>
+    <xs:element name="Halimeda" type="elementType"/>
+    <xs:element name="Phosphate" type="elementType"/>
+    <xs:element name="Mineralized" type="elementType"/>
+    <xs:element name="HeavyMin" type="elementType"/>
+    <xs:element name="GlaucRelict" type="elementType"/>
+    <xs:element name="Seagrass" type="elementType"/>
+    <xs:element name="Plants" type="elementType"/>
+    <xs:element name="MnNodule" type="elementType"/>
+    <xs:element name="ObsvnDetails" type="elementType"/>
+   
+    <xs:element name="DataTypes" type="elementType"/>
+    <xs:element name="Gravel" type="elementType"/>
+    <xs:element name="Sand" type="elementType"/>
+    <xs:element name="Mud" type="elementType"/>
+    <xs:element name="Clay" type="elementType"/>
+    <xs:element name="Grainsze" type="elementType"/>
+    <xs:element name="Sorting" type="elementType"/>
+    <xs:element name="Facies" type="elementType"/>
+    <xs:element name="FacMshp" type="elementType"/>
+    <xs:element name="FolkCde" type="elementType"/>
+    <xs:element name="RckMshp" type="elementType"/>
+    <xs:element name="VegMshp" type="elementType"/>
+    <xs:element name="Carbonate" type="elementType"/>
+    <xs:element name="MunslColr" type="elementType"/>
+    <xs:element name="OrgCarbn" type="elementType"/>
+    <xs:element name="lShearStr" type="elementType"/>
+    <xs:element name="Porosity" type="elementType"/>
+    <xs:element name="PWaveVel" type="elementType"/>
+    <xs:element name="Roughness" type="elementType"/>
+    <xs:element name="lCritShStrs" type="elementType"/>
+    <xs:element name="GeolAge" type="elementType"/>
+     
+   
+    <!-- types sections -->
+    <xs:complexType name="elementType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="integerType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="floatType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

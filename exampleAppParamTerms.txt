@@ -1,0 +1,127 @@
+From Lith file OD9_FAC.TXT
+<chronos:lithEntry>
+    <geo:lat>16.55</geo:lat>
+    <geo:long>-79.87</geo:long>
+    <chronos:ObsvnTop>56.16</chronos:ObsvnTop>
+    <chronos:ObsvnBot>56.44</chronos:ObsvnBot>
+    <skos:related>http://oceanleadership.org/lsh/165/1000/A</skos:related>
+    <chronos:DatSetKey>2327</chronos:DatSetKey>
+    <chronos:LocnKey>2327</chronos:LocnKey>
+    <chronos:ObsvnKey>356290</chronos:ObsvnKey>
+    <chronos:Device>ODP pntn=99.7</chronos:Device>
+    <chronos:CalcPelag> 100</chronos:CalcPelag>
+</chronos:lithEntry>
+
+From image strips:
+<rdf:Description>http://localhost:8080/imagestripsLD/stripset/_10xx/1000A/}
+    <imagestrips:stripname>1000A07H_7</imagestrips:stripname>
+    <dc:date>27/8/2009 11:1</dc:date>
+    <imagestrips:photoname>1000A07H.tif</imagestrips:photoname>
+    <imagestrips:photosize>5133:3388</imagestrips:photosize>
+    <iodp:sectiontop>59.8</iodp:sectiontop>
+    <imagestrips:reports></imagestrips:reports>
+    <imagestrips:finaldpi>81</imagestrips:finaldpi>
+    <imagestrips:finallength>0.590697675021</imagestrips:finallength>
+    <iodp:curatedlength>0.55</iodp:curatedlength>
+    <imagestrips:maskbox>1441;50;1572;1050</imagestrips:maskbox>
+    <iodp:sitehole>1000A</iodp:sitehole>
+    <skos:related>http://www.coreref.org/drilling/1/hole</skos:related>
+    <foaf:name>LDEO</foaf:name>
+    <foaf:homepage>http:www.ldeo.columbia.edu</foaf:homepage>
+    <skos:related>http://oceanleadership.org/lsh/165/1000/A</skos:related>
+    <iodp:leg>165</iodp:leg>
+    <geo:lat>16.55</geo:lat>
+    <geo:long>-79.87</geo:long>
+    <iodp:site>1000</iodp:site>
+    <iodp:hole>A</iodp:hole>
+    <iodp:core>07H</iodp:core>
+    <iodp:section>7</iodp:section>
+</rdf:Description>
+
+
+From age model
+ <rdf:Description rdf:about='http://cws3.geol.iastate.edu:8080/janusAmp/loc/agemodel/1'>
+    <dc:title>168_1023A</dc:title>
+    <dc:description></dc:description>
+    <dc:creator>mdcline</dc:creator>
+    <dc:date>2007-10-09 10:57:59.0</dc:date>
+    <chronos:leg rdf:datatype='http://www.w3.org/2001/XMLSchema#integer'>168</chronos:leg>
+    <chronos:site rdf:datatype='http://www.w3.org/2001/XMLSchema#integer'>1023</chronos:site>
+    <chronos:hole rdf:datatype='http://www.w3.org/2001/XMLSchema#integer'>A</chronos:hole>
+   
+   <chronos:timescale>Berggren et al., 1995</chronos:timescale>
+   
+   <chronos:depthUnits rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>mbsf</chronos:depthUnits>
+   
+   <geo:lat rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>47.9173</geo:lat>
+    <geo:long rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>-128.792</geo:long>
+    
+    
+    <chronos:age rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.0</chronos:age>
+    <chronos:depth rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.0</chronos:depth>
+    
+    
+    <chronos:age rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.0904</chronos:age>
+    <chronos:depth rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>42.30769</chronos:depth>
+    <chronos:age rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.21969</chronos:age>
+    <chronos:depth rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>76.25</chronos:depth>
+    <chronos:age rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.28049</chronos:age>
+    <chronos:depth rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>116.27959</chronos:depth>
+    <chronos:age rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>0.46</chronos:age>
+    <chronos:depth rdf:datatype='http://www.w3.org/2001/XMLSchema#decimal'>192.87</chronos:depth>
+  </rdf:Description>
+
+
+From jq
+
+<rdf:Description rdf:about='serverURL/imagestrips/IDetc'>
+    <skos:related>http://www.coreref.org/drilling/1/hole</skos:related>
+    <foaf:name>TAMU</foaf:name>
+    <foaf:homepage>http:www.iodp.tamu.edu</foaf:homepage>
+    <skos:related>http://oceanleadership.org/lsh/311/1329</skos:related>
+    <iodp:leg>311</iodp:leg>
+    <iodp:site>1329</iodp:site>
+    <iodp:hole>E</iodp:hole>
+    <iodp:roundsumtotal_core>38</iodp:roundsumtotal_core>
+    <iodp:sumcore_count>16</iodp:sumcore_count>
+    <iodp:sumsection_count>35</iodp:sumsection_count>
+    <iodp:sumsample_count>529</iodp:sumsample_count>
+    <iodp:sumgra_section_count>22</iodp:sumgra_section_count>
+    <iodp:summsl_section_count>22</iodp:summsl_section_count>
+    <iodp:sumngr_section_count>0</iodp:sumngr_section_count>
+    <iodp:sumpwl_section_count>9</iodp:sumpwl_section_count>
+    <iodp:sumpws_section_count>9</iodp:sumpws_section_count>
+    <iodp:summad_sample_count>34</iodp:summad_sample_count>
+    <iodp:sumthermcon_count>10</iodp:sumthermcon_count>
+    <iodp:sumshear_strength_count>0</iodp:sumshear_strength_count>
+    <iodp:sumcolor_ref_section_count>24</iodp:sumcolor_ref_section_count>
+    <iodp:summs2f_section_count>0</iodp:summs2f_section_count>
+    <iodp:sumdht_apct_run_count>0</iodp:sumdht_apct_run_count>
+    <iodp:sumsplicer_count>0</iodp:sumsplicer_count>
+    <iodp:sumtensor_core_count>0</iodp:sumtensor_core_count>
+    <iodp:sumcrymag_section_count>24</iodp:sumcrymag_section_count>
+    <iodp:sumpaleo_sample_count>0</iodp:sumpaleo_sample_count>
+    <iodp:sumpaleo_sample_taxon_count>0</iodp:sumpaleo_sample_taxon_count>
+    <iodp:sumageprofile_count>0</iodp:sumageprofile_count>
+    <iodp:sumage_datapoint_count>0</iodp:sumage_datapoint_count>
+    <iodp:sumxrd_sample_count>2</iodp:sumxrd_sample_count>
+    <iodp:sumxrd_image_count>0</iodp:sumxrd_image_count>
+    <iodp:sumxrf_sample_count>0</iodp:sumxrf_sample_count>
+    <iodp:sumicp_sample_count>0</iodp:sumicp_sample_count>
+    <iodp:sumchem_rockeval_sample_count>0</iodp:sumchem_rockeval_sample_count>
+    <iodp:sumchem_carb_sample_count>12</iodp:sumchem_carb_sample_count>
+    <iodp:sumchem_gas_sample_count>16</iodp:sumchem_gas_sample_count>
+    <iodp:sumchem_iw_sample_count>10</iodp:sumchem_iw_sample_count>
+    <iodp:sumsmear_slide_count>0</iodp:sumsmear_slide_count>
+    <iodp:sumsed_thin_sect_count>0</iodp:sumsed_thin_sect_count>
+    <iodp:sumhrthin_count>0</iodp:sumhrthin_count>
+    <iodp:sumvcd_image_count>32</iodp:sumvcd_image_count>
+    <iodp:sumhr_vcd_image_count>0</iodp:sumhr_vcd_image_count>
+    <iodp:sumcore_images_count>7</iodp:sumcore_images_count>
+    <iodp:sumcore_section_images_count>30</iodp:sumcore_section_images_count>
+    <iodp:sumcloseup_count>3</iodp:sumcloseup_count>
+  </rdf:Description>
+
+
+From doiReg?
+

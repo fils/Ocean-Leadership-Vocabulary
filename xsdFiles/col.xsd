@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://oceanleadership.org/col/elements/1.0/"
+    targetNamespace="http://oceanleadership.org/col/elements/1.0/">
+
+    <xs:annotation>
+        <xs:documentation xml:lang="en">The first pass at making a set of namespace elements for use
+            in the Linked Data effort at USIO's </xs:documentation>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"> </xs:import>
+
+    <xs:element name="wadl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="wadlURI">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string"> </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- These keep being added..  so it's curious if one should even do this...    plus this should be in a IODP, not COL space -->
+    <xs:element name="leg">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> The leg is the numeric number given to a cruise or expedition  </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="310"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- These keep being added..  so it's curious if one should even do this...    plus this should be in a IODP, not COL space -->
+    <xs:element name="site">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> The site is the numeric number given to drill site for a given leg  </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="310"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="hole" type="integerType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> The hole is the letter association  given to drill hole for a given site </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="sitehole" type="elementType"/>
+    <xs:element name="core" type="elementType"/>
+    <xs:element name="section" type="elementType"/>
+    <xs:element name="sectiontop" type="elementType"/>
+    <xs:element name="obsvntop" type="elementType"/>
+    <xs:element name="obsvbottom" type="elementType"/>
+    <xs:element name="locn" type="elementType"/>
+
+    <xs:element name="waterdepth" type="elementType"/>
+    <xs:element name="coreCount" type="elementType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> The number of cores from this site </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="coreInterval" type="elementType"/>
+    <xs:element name="percentRecovery" type="elementType"/>
+    <xs:element name="drilled" type="elementType"/>
+    <xs:element name="penetration" type="elementType"/>
+
+    <!-- Age model related elements: Depth is a prime example of breaking out mbsf and all the other versions -->
+    <xs:element name="depthtype" type="elementType"/>
+    <xs:element name="timescale" type="elementType"/>
+    <xs:element name="depth" type="floatType"/>
+    <xs:element name="age" type="floatType"/>
+
+    <!-- types sections -->
+    <xs:complexType name="elementType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="integerType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="floatType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>
